@@ -5,4 +5,8 @@ public class App {
         System.out.println("Hello!");
         System.out.println("Sum: " + Utils.add(5, 3));
     }
+
+    public String formatProductInfo(String name, double price) {
+        return name;
+    }
 }
