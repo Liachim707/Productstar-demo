@@ -76,10 +76,15 @@ settings.gradle   # Имя Gradle-проекта
 - `smoke` — тег класса, применяемый ко всем тестам в `AppTest`;
 - `unit` — дополнительный тег двух обычных модульных тестов.
 
-Для запуска тестов с определённым тегом можно использовать, например:
+Запустить только тесты с тегом `unit`:
 
-```bash
-./gradlew test --tests com.example.demo.AppTest
-```
+- Windows:
+  ```bat
+  gradlew.bat test -PincludeTags=unit
+  ```
+- macOS / Linux:
+  ```bash
+  ./gradlew test -PincludeTags=unit
+  ```
 
-Фильтрация по тегам также настраивается в конфигурации задачи `test` Gradle.
+Запустить тесты с тегом `smoke` можно аналогично, заменив значение на `smoke`. Чтобы исключить тег, используйте параметр `-PexcludeTags=тег`.
